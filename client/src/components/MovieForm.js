@@ -15,19 +15,19 @@ function MovieForm() {
   });
 
   function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/movies", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((r) => r.json())
-      .then((data) => {
-        console.log(data);
-      });
-  }
+  e.preventDefault();
+  fetch("/movies", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((r) => r.json())
+    .then((data) => {
+      console.log(data);
+    });
+}
 
   function handleChange(e) {
     const value =
